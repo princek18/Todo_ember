@@ -1,0 +1,12 @@
+<form style="margin-top: 1rem;" onsubmit={{this.handleSubmit}}>
+    <input style="text-align: left;" type="text" required value={{this.temp}} {{on "change" this.update}}>
+    <button type="submit">Add</button>
+</form>
+<br>
+{{!-- {{#if this.flag}} --}}
+    {{#each this.data as |one|}}
+        <Display @one={{one}} @fun={{this.delete}} />
+    {{else}}
+        <h1>Nothing To Show!</h1>
+    {{/each}}
+{{!-- {{/if}} --}}

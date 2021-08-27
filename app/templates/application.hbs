@@ -1,7 +1,12 @@
-{{page-title "Dummy"}}
-
-{{!-- The following component displays Ember's default welcome message. --}}
-<WelcomePage />
-{{!-- Feel free to remove this! --}}
-
+<header class="head-nav">
+    <LinkTo class="link" @route='/'><h1>Random</h1></LinkTo>
+        <ul>
+            <LinkTo class="link" @route='sigin'><li>Sign In</li></LinkTo>
+            <LinkTo class="link" @route='story'><li>Story</li></LinkTo>
+        </ul>
+    <LinkTo @route='get'><button class="get-btn" type="button">Get Started</button></LinkTo>
+</header>
 {{outlet}}
+<footer>
+    &copy; Prince Kumar
+</footer>
